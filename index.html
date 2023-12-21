@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bluetooth Device Connector</title>
+    <style>
+        /* Previous styles here... */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 24px);
+        }
+        #output {
+            text-align: left;
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 20px;
+            height: 100px;
+            overflow-y: auto;
+        }
+        .command-button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #console {
+            background-color: black;
+            color: limegreen;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            height: 150px;
+            overflow-y: auto;
+            text-align: left;
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Bluetooth Device Connector</h2>
+        <button id="connect">Connect to Bluetooth Device</button>
+        <div id="interface" class="hidden">
+            <button class="command-button" id="enrollCommand">Test Enroll</button>
+            <button class="command-button" id="identifyCommand">Test Identify</button>
+            <div id="console"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
