@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectButton = document.getElementById('connect');
     const enrollCommandButton = document.getElementById('enrollCommand');
     const identifyCommandButton = document.getElementById('identifyCommand');
+    const deleteCommandButton = document.getElementById('deleteCommand');
     const consoleDiv = document.getElementById('console');
     const interfaceDiv = document.getElementById('interface');
     let device, server, service, characteristicWrite, characteristicRead;
@@ -23,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     identifyCommandButton.addEventListener('click', () => {
         sendCommand(':03,00,03@');
+    });
+
+     deleteCommandButton.addEventListener('click', () => {
+        sendCommand(':05,00,05@');
     });
 
     async function connectBluetooth() {
